@@ -70,7 +70,7 @@ export default async function Index() {
 }
 
 
-export async function getPosts() {
+async function getPosts() {
   return getAllPosts([
     'title',
     'date',
