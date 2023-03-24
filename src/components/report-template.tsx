@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const ReportTemplate = () => {
 	const styles = {
 		page: {
@@ -41,7 +43,7 @@ const ReportTemplate = () => {
 
 				<div style={styles.spacer2}></div>
 
-				<img style={styles.fullWidth} src="photo-2.png" />
+				<Image style={styles.fullWidth} src="photo-2.png" alt=""/>
 			</div>
 
 			<div style={styles.page}>
@@ -53,7 +55,7 @@ const ReportTemplate = () => {
 
 				<div style={styles.columnLayout}>
 					<div style={styles.column}>
-						<img style={styles.fullWidth} src="photo-2.png" />
+						<Image style={styles.fullWidth} src="photo-2.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle One</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -63,7 +65,7 @@ const ReportTemplate = () => {
 					</div>
 
 					<div style={styles.column}>
-						<img style={styles.fullWidth} src="photo-1.png" />
+						<Image style={styles.fullWidth} src="photo-1.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle Two</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -75,7 +77,7 @@ const ReportTemplate = () => {
 
 				<div style={styles.columnLayout}>
 					<div style={styles.column}>
-						<img style={styles.fullWidth} src="photo-3.png" />
+						<Image style={styles.fullWidth} src="photo-3.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle One</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -85,7 +87,7 @@ const ReportTemplate = () => {
 					</div>
 
 					<div style={styles.column}>
-						<img style={styles.fullWidth} src="photo-4.png" />
+						<Image style={styles.fullWidth} src="photo-4.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle Two</h4>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
