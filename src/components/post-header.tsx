@@ -1,21 +1,15 @@
 import Avatar from './avatar'
-import Twitter from './twitter'
-import LinkedIn from './linkedin'
-import Github from './github'
 // import DateFormatter from './date-formatter'
 import PostTitle from './post-title'
 import type Author from '../interface/author'
-import type SocialLink from '../interface/social-links'
 
 type Props = {
   title: string
-  coverImage: string
   // date: string
-  socialLinks: SocialLink
   author: Author
 }
 
-const PostHeader = ({ title, socialLinks, author }: Props) => {
+const PostHeader = ({ title, author }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>

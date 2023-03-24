@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google'
 import Layout from '@/components/layout'
 import Container from '@/components/container'
 import { getAllPosts } from '@/lib/api'
@@ -6,11 +5,12 @@ import type { Metadata } from 'next'
 import PostHeader from '@/components/post-header'
 import PostBody from '@/components/post-body'
 import Intro from '@/components/intro'
-import jsPDF from 'jspdf';
+// import jsPDF from 'jspdf';
 // import { useRef } from 'react';
-import ReportTemplate from '@/components/report-template'
+// import ReportTemplate from '@/components/report-template'
 import markdownToHtml from '@/lib/markdownToHtml'
 import SocialLinks from '@/components/social-links'
+import PostType from '@/interface/post'
 
 export const metadata: Metadata = {
   title: 'CV - Rafal Woloszyn',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 //https://beta.nextjs.org/docs/data-fetching/caching
 export default async function Index() {
   // const reportTemplateRef = useRef(null)
-  const posts = await getPosts()
+  const posts: PostType[]  = await getPosts() as any
   const heroPost = posts[0]
 
   const content = await markdownToHtml(heroPost.content || '')
@@ -53,12 +53,10 @@ export default async function Index() {
           <article className="mb-32">
                 <PostHeader
                   title={heroPost.title}
-                  socialLinks={heroPost.socialLinks}
-                  date={heroPost.date}
                   author={heroPost.author}
                 />
                 <PostBody content={content}/>
-                <SocialLinks links={heroPost.socialLinks}/>
+                <SocialLinks links={heroPost.socialLinks as any}/>
           </article>
           {/* <div ref={reportTemplateRef}>
 				    <ReportTemplate />

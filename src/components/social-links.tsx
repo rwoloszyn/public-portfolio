@@ -1,23 +1,19 @@
-import Avatar from './avatar'
-import Twitter from './twitter'
-import LinkedIn from './linkedin'
-import Github from './github'
-// import DateFormatter from './date-formatter'
-import PostTitle from './post-title'
-import type Author from '../interface/author'
-import type SocialLink from '../interface/social-links'
+import TwitterBadge from './twitter'
+import LinkedInBadge from './linkedin'
+import GithubBagde from './github'
+import type SocialLinks from '../interface/social-links'
 
 type Props = {
-  links: SocialLink
+  links: SocialLinks
 }
 
-const SocialLinks = ({ links}: Props) => {
+const SocialLinks = ({ links } : Props ) => {
   return (
     <>
       <div className="max-w-2xl mx-auto">
-        { links.github && <Github url={links.github}/>}
-        { links.linkedin && <LinkedIn url={links.linkedin}/>}
-        { links.twitter && <Twitter url={links.twitter}/>}
+        { links.github && <GithubBagde url={links.github}/>}
+        { links.linkedin && <LinkedInBadge url={links.linkedin}/>}
+        { links.twitter && <TwitterBadge url={links.twitter}/>}
       </div>
     </>
   )

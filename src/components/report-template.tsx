@@ -31,6 +31,10 @@ const ReportTemplate = () => {
 		marginb0: {
 			marginBottom: 0,
 		},
+
+		introText: {
+
+		}
 	};
 	return (
 		<>
@@ -48,13 +52,13 @@ const ReportTemplate = () => {
 
 			<div style={styles.page}>
 				<div>
-					<h2 style={styles.introText}>
+					<h2 style={styles.introText as any}>
 						Report Heading That Spans More Than Just One Line
 					</h2>
 				</div>
 
 				<div style={styles.columnLayout}>
-					<div style={styles.column}>
+					<div style={styles.column as any}>
 						<Image style={styles.fullWidth} src="photo-2.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle One</h4>
 						<p>
@@ -64,7 +68,7 @@ const ReportTemplate = () => {
 						</p>
 					</div>
 
-					<div style={styles.column}>
+					<div style={styles.column as any}>
 						<Image style={styles.fullWidth} src="photo-1.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle Two</h4>
 						<p>
@@ -76,7 +80,7 @@ const ReportTemplate = () => {
 				</div>
 
 				<div style={styles.columnLayout}>
-					<div style={styles.column}>
+					<div style={styles.column as any}>
 						<Image style={styles.fullWidth} src="photo-3.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle One</h4>
 						<p>
@@ -86,7 +90,7 @@ const ReportTemplate = () => {
 						</p>
 					</div>
 
-					<div style={styles.column}>
+					<div style={styles.column as any}>
 						<Image style={styles.fullWidth} src="photo-4.png" alt=""/>
 						<h4 style={styles.marginb0}>Subtitle Two</h4>
 						<p>
