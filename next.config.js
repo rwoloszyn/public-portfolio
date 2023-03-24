@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  // basePath: '/gh-pages-test',
+  distDir: 'build',
 }
 
 module.exports = nextConfig
